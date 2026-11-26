@@ -18,6 +18,7 @@ export default function VendorAuthForm({ mode }: VendorAuthFormProps) {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -138,7 +139,22 @@ export default function VendorAuthForm({ mode }: VendorAuthFormProps) {
       </label>
       <label>
         Password
-        <input autoComplete={mode === "apply" ? "new-password" : "current-password"} minLength={12} maxLength={128} name="password" required type="password" />
+        <span className="vendor-password-input">
+          <input autoComplete={mode === "apply" ? "new-password" : "current-password"} minLength={12} maxLength={128} name="password" required type={isPasswordVisible ? "text" : "password"} />
+          <button
+            aria-label={isPasswordVisible ? "Hide password" : "Show password"}
+            aria-pressed={isPasswordVisible}
+            className="vendor-password-toggle"
+            onClick={() => setIsPasswordVisible((visible) => !visible)}
+            type="button"
+          >
+            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24">
+              <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z" />
+              <circle cx="12" cy="12" r="2.5" />
+              {isPasswordVisible && <path d="m4 4 16 16" />}
+            </svg>
+          </button>
+        </span>
         {mode === "apply" && <small>Use at least 12 characters.</small>}
       </label>
       {error && <p className="vendor-form-error" role="alert">{error}</p>}

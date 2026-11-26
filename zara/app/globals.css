@@ -471,9 +471,29 @@ button:disabled { cursor: not-allowed; }
   border: 1px solid var(--line);
   outline: 0;
   background: #fff;
-  color: var(--ink);
+  color: #1d1b19;
+  caret-color: #1d1b19;
   font-size: 12px;
 }
+.vendor-password-input { position: relative; display: block; }
+.vendor-password-input input { padding-right: 42px; }
+.vendor-form .vendor-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #765b50;
+  cursor: pointer;
+}
+.vendor-password-toggle svg { width: 17px; height: 17px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.vendor-password-toggle:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 1px; }
 .vendor-form textarea { resize: vertical; }
 .vendor-form input:focus, .vendor-form textarea:focus, .vendor-form select:focus { border-color: var(--terracotta); box-shadow: 0 0 0 2px rgb(200 76 22 / 10%); }
 .vendor-form small { color: var(--muted); font-size: 9px; font-weight: 400; }
