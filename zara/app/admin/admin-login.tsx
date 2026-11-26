@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 type AdminLoginProps = {
@@ -42,8 +43,8 @@ export default function AdminLogin({ configured }: AdminLoginProps) {
     <main className="admin-login-page">
       <section className="admin-login-panel" aria-labelledby="admin-login-title">
         <Link className="admin-brand admin-login-brand" href="/" aria-label="Skindrug Gist home">
-          <span className="admin-brand-mark">t.</span>
-          <span>SKINDRUG<span className="admin-brand-subtitle">GIST ADMIN</span></span>
+          <Image className="admin-brand-logo" src="/skindrug-gist-mark.png" alt="Skindrug Gist" width={110} height={70} unoptimized />
+          <span className="admin-brand-subtitle">ADMIN WORKSPACE</span>
         </Link>
         {configured ? (
           <>

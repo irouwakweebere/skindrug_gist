@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import AdminLogoutButton from "../admin-logout-button";
@@ -111,8 +112,8 @@ export default function SiteContentEditor({ initialContent, storageConfigured, l
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <Link className="admin-brand" href="/" aria-label="Skindrug Gist home">
-          <span className="admin-brand-mark">t.</span>
-          <span>SKINDRUG<span className="admin-brand-subtitle">GIST ADMIN</span></span>
+          <Image className="admin-brand-logo" src="/skindrug-gist-mark.png" alt="Skindrug Gist" width={110} height={70} unoptimized />
+          <span className="admin-brand-subtitle">ADMIN WORKSPACE</span>
         </Link>
         <p className="admin-nav-label">WORKSPACE</p>
         <nav className="admin-nav" aria-label="Admin navigation">
@@ -163,7 +164,7 @@ export default function SiteContentEditor({ initialContent, storageConfigured, l
                   <TextField label="Hero button" value={content.hero.ctaText} onChange={(value) => updateSection("hero", "ctaText", value)} />
                   <TextField label="Secondary link" value={content.hero.secondaryCtaText} onChange={(value) => updateSection("hero", "secondaryCtaText", value)} />
                   <TextField label="Description" multiline value={content.hero.description} onChange={(value) => updateSection("hero", "description", value)} />
-                  <TextField label="Image URL (HTTPS)" type="url" value={content.hero.imageUrl} onChange={(value) => updateSection("hero", "imageUrl", value)} />
+                  <TextField label="Image URL (HTTPS or /images/ path)" value={content.hero.imageUrl} onChange={(value) => updateSection("hero", "imageUrl", value)} />
                   <TextField label="Image description" value={content.hero.imageAlt} onChange={(value) => updateSection("hero", "imageAlt", value)} />
                   <TextField label="Proof line" value={content.hero.proofTitle} onChange={(value) => updateSection("hero", "proofTitle", value)} />
                   <TextField label="Proof description" value={content.hero.proofDescription} onChange={(value) => updateSection("hero", "proofDescription", value)} />
@@ -209,7 +210,7 @@ export default function SiteContentEditor({ initialContent, storageConfigured, l
                   <TextField label="Main heading" value={content.learn.heading} onChange={(value) => updateSection("learn", "heading", value)} />
                   <TextField label="Emphasized heading" value={content.learn.emphasis} onChange={(value) => updateSection("learn", "emphasis", value)} />
                   <TextField label="Description" multiline value={content.learn.description} onChange={(value) => updateSection("learn", "description", value)} />
-                  <TextField label="Image URL (HTTPS)" type="url" value={content.learn.imageUrl} onChange={(value) => updateSection("learn", "imageUrl", value)} />
+                  <TextField label="Image URL (HTTPS or /images/ path)" value={content.learn.imageUrl} onChange={(value) => updateSection("learn", "imageUrl", value)} />
                   <TextField label="Image description" value={content.learn.imageAlt} onChange={(value) => updateSection("learn", "imageAlt", value)} />
                   <TextField label="Link label" value={content.learn.linkText} onChange={(value) => updateSection("learn", "linkText", value)} />
                   <TextField label="Image note (first line)" value={content.learn.imageNoteFirst} onChange={(value) => updateSection("learn", "imageNoteFirst", value)} />
@@ -239,7 +240,7 @@ export default function SiteContentEditor({ initialContent, storageConfigured, l
                     <TextField label="Name" value={product.name} onChange={(value) => updateProduct(index, "name", value)} />
                     <TextField label="Price" value={product.price} onChange={(value) => updateProduct(index, "price", value)} />
                     <TextField label="Category label" value={product.label} onChange={(value) => updateProduct(index, "label", value)} />
-                    <TextField label="Image URL (HTTPS)" type="url" value={product.imageUrl} onChange={(value) => updateProduct(index, "imageUrl", value)} />
+                    <TextField label="Image URL (HTTPS or /images/ path)" value={product.imageUrl} onChange={(value) => updateProduct(index, "imageUrl", value)} />
                     <TextField label="Description" multiline value={product.description} onChange={(value) => updateProduct(index, "description", value)} />
                     <TextField label="Image description" value={product.imageAlt} onChange={(value) => updateProduct(index, "imageAlt", value)} />
                   </div>

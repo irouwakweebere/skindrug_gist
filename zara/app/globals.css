@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #B03202;
+  --paper: #BD3B01;
   --surface: #fff7ed;
   --ink: #fffaf3;
-  --brand-blue: #c84c16;
+  --brand-blue: #BD3B01;
   --green: #a94422;
   --terracotta: #7a3826;
   --brown: #4a2118;
@@ -67,7 +67,7 @@ button:disabled { cursor: not-allowed; }
 .proof-avatars span:nth-child(2) { background: #78866f; }.proof-avatars span:nth-child(3) { background: #c59c7a; }
 .hero-proof p { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.65; }.hero-proof strong { color: var(--ink); font-size: 10px; font-weight: 600; }
 .hero-index { position: absolute; bottom: 24px; left: 0; color: #92958c; font-size: 9px; letter-spacing: 1px; }
-.hero-portrait { position: relative; min-height: 600px; overflow: hidden; background-color: #d0bdb0; background-image: url("https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1450&q=88"); background-position: center 38%; background-size: cover; }
+.hero-portrait { position: relative; min-height: 600px; overflow: hidden; background-color: #d0bdb0; background-image: url("/images/hero-melanin.jpg"); background-position: center 38%; background-size: cover; }
 .hero-portrait::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgb(122 56 38 / 34%), transparent 37%); content: ""; }
 .portrait-caption { position: absolute; right: 26px; bottom: 25px; z-index: 1; display: flex; gap: 16px; color: #fffdf8; font-size: 8px; letter-spacing: 1.3px; }
 .portrait-seal { position: absolute; top: 32px; right: 32px; z-index: 1; width: 104px; height: 104px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgb(255 255 255 / 75%); border-radius: 50%; background: rgb(248 247 242 / 78%); color: var(--green); font-size: 7px; letter-spacing: 1px; line-height: 1.6; }
@@ -86,7 +86,7 @@ button:disabled { cursor: not-allowed; }
 .service-row p { max-width: 360px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
 .service-detail { justify-self: end; color: #85877d; font-size: 8px; letter-spacing: 1px; }
 .learn-section { min-height: 590px; display: grid; grid-template-columns: .94fr 1.06fr; background: var(--surface); color: var(--brown); }
-.learn-image { position: relative; min-height: 590px; background-color: #bac1ad; background-image: url("https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85"); background-position: center; background-size: cover; }
+.learn-image { position: relative; min-height: 590px; background-color: #bac1ad; background-image: url("/images/learn-skincare.jpg"); background-position: center; background-size: cover; }
 .learn-image::after { position: absolute; inset: 45% 0 0; background: linear-gradient(0deg, rgb(122 56 38 / 38%), transparent); content: ""; }
 .image-note { position: absolute; bottom: 29px; left: 11%; z-index: 1; color: #fffdf8; font-family: var(--display); font-size: 26px; line-height: 1.05; }
 .learn-content { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 70px 13%; }
@@ -105,9 +105,9 @@ button:disabled { cursor: not-allowed; }
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 23px; margin-top: 42px; }
 .product-image { height: 270px; position: relative; background-color: #e5e4da; background-size: cover; background-position: center; }
 .product-image span { position: absolute; top: 13px; left: 14px; color: #596457; font-size: 8px; letter-spacing: 1.2px; }
-.product-cleanser { background-image: url("https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=800&q=80"); }
-.product-moisturizer { background-image: url("https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=80"); }
-.product-spf { background-image: url("https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=800&q=80"); }
+.product-cleanser { background-image: url("/images/product-cleanser.jpg"); }
+.product-moisturizer { background-image: url("/images/product-moisturizer.jpg"); }
+.product-spf { background-image: url("/images/product-spf.jpg"); }
 .product-info { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding-top: 14px; }
 .product-info h3 { font-size: 21px; }.product-info p { margin: 5px 0 0; color: var(--muted); font-size: 9px; }.product-info > span { padding-top: 5px; font-size: 10px; }
 .shop-link { margin-top: 35px; }
@@ -260,13 +260,13 @@ button:disabled { cursor: not-allowed; }
 .quiz-card > h2, .quiz-result h2 { margin: 28px 0 0; font-family: var(--display); font-size: 36px; font-weight: 500; letter-spacing: 0; line-height: 1.05; }
 .quiz-question-description { margin: 9px 0 19px; color: var(--muted); font-size: 11px; line-height: 1.7; }
 .quiz-answers { display: grid; gap: 9px; }
-.quiz-answer { width: 100%; min-height: 66px; display: flex; align-items: center; gap: 12px; padding: 11px 13px; border: 1px solid #e8dfd4; background: #fffdf8; color: var(--ink); cursor: pointer; text-align: left; transition: border-color .2s ease, background .2s ease; }
+.quiz-answer { width: 100%; min-height: 66px; display: flex; align-items: center; gap: 12px; padding: 11px 13px; border: 1px solid #e8dfd4; background: #fffdf8; color: #3b2d26; cursor: pointer; text-align: left; transition: border-color .2s ease, background .2s ease; }
 .quiz-answer:hover, .quiz-answer.selected { border-color: var(--terracotta); background: #fbf1e8; }
 .quiz-answer-mark { width: 19px; height: 19px; flex: 0 0 19px; display: grid; place-items: center; border: 1px solid #d8cbbd; border-radius: 50%; color: var(--terracotta); font-size: 11px; }
 .quiz-answer.selected .quiz-answer-mark { border-color: var(--terracotta); background: #fff; }
 .quiz-answer-copy { display: grid; gap: 4px; }
 .quiz-answer-copy strong { font-size: 11px; font-weight: 600; }
-.quiz-answer-copy small { color: var(--muted); font-size: 9px; line-height: 1.5; }
+.quiz-answer-copy small { color: #685b52; font-size: 9px; line-height: 1.5; }
 .quiz-answer-arrow { margin-left: auto; color: #a99583; font-size: 12px; }
 .quiz-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; }
 .quiz-back-button, .quiz-restart { padding: 8px 0; border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 10px; }
@@ -290,7 +290,8 @@ button:disabled { cursor: not-allowed; }
 .quiz-shop-link span { margin-left: 5px; color: var(--terracotta); }
 .quiz-restart { margin-top: 14px; text-decoration: underline; text-underline-offset: 3px; }
 .quiz-footer { margin-top: auto; padding: 18px 20px; border-top: 1px solid var(--line); color: #8a8179; font-size: 9px; text-align: center; }
-.exact-assessment-form { width: 100%; }.assessment-launch { width: min(100% - 40px, 680px); margin: 74px auto; text-align: center; }.assessment-launch h2 { margin: 10px 0 12px; font-family: var(--display); font-size: 52px; font-weight: 400; line-height: 1; }.assessment-launch h2 em { color: var(--terracotta); }.assessment-launch > p:not(.eyebrow) { margin: 0 auto 22px; color: var(--muted); font-size: 12px; line-height: 1.8; }.assessment-launch-button { min-height: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 0 18px; }.assessment-progress { margin-bottom: 24px; }.assessment-progress > span { color: var(--terracotta); font-size: 9px; font-weight: 700; letter-spacing: 1px; }.assessment-progress strong { display: block; margin-top: 7px; font-family: var(--display); font-size: 28px; font-weight: 500; }.assessment-progress > div { height: 3px; margin-top: 14px; background: #eee5da; }.assessment-progress > div span { height: 100%; display: block; background: var(--terracotta); transition: width .25s ease; }.assessment-section-heading { margin: 28px 0 16px; padding-top: 18px; border-top: 1px solid var(--line); }.assessment-section-heading:first-child { margin-top: 0; padding-top: 0; border-top: 0; }.assessment-section-heading p { margin: 0; color: var(--terracotta); font-size: 10px; font-weight: 700; letter-spacing: 1px; }.assessment-field { display: grid; gap: 7px; margin-bottom: 14px; color: #525b50; font-size: 11px; font-weight: 600; }.assessment-field input, .assessment-field textarea { width: 100%; border: 1px solid #ddd3c5; border-radius: 0; background: #fff; padding: 11px; color: var(--ink); font-family: inherit; font-size: 12px; outline: none; }.assessment-field input { height: 43px; }.assessment-field textarea { resize: vertical; }.assessment-field input:focus, .assessment-field textarea:focus { border-color: var(--terracotta); }.assessment-fieldset { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; margin: 0 0 14px; padding: 0; border: 0; }.assessment-fieldset legend { grid-column: 1 / -1; margin-bottom: 8px; color: #525b50; font-size: 11px; font-weight: 600; }.assessment-radio, .assessment-checkbox { display: flex; align-items: flex-start; gap: 8px; min-height: 32px; padding: 8px 10px; border: 1px solid #e8dfd4; background: #fff; color: var(--ink); font-size: 10px; line-height: 1.45; }.assessment-radio input, .assessment-checkbox input { margin-top: 1px; accent-color: var(--terracotta); }.consent-question { grid-column: 1 / -1; }.exact-assessment-form .quiz-controls { margin-top: 20px; }.quiz-launch-card { display: grid; justify-items: center; gap: 18px; padding-block: 38px; text-align: center; }.quiz-launch-card p { max-width: 430px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }.quiz-launch-button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; }
+.exact-assessment-form { width: 100%; }.assessment-launch { width: min(100% - 40px, 680px); margin: 74px auto; text-align: center; }.assessment-launch h2 { margin: 10px 0 12px; font-family: var(--display); font-size: 52px; font-weight: 400; line-height: 1; }.assessment-launch h2 em { color: var(--terracotta); }.assessment-launch > p:not(.eyebrow) { margin: 0 auto 22px; color: var(--muted); font-size: 12px; line-height: 1.8; }.assessment-launch-button { min-height: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 0 18px; }.assessment-progress { margin-bottom: 24px; }.assessment-progress > span { color: var(--terracotta); font-size: 9px; font-weight: 700; letter-spacing: 1px; }.assessment-progress strong { display: block; margin-top: 7px; font-family: var(--display); font-size: 28px; font-weight: 500; }.assessment-progress > div { height: 3px; margin-top: 14px; background: #eee5da; }.assessment-progress > div span { height: 100%; display: block; background: var(--terracotta); transition: width .25s ease; }.assessment-section-heading { margin: 28px 0 16px; padding-top: 18px; border-top: 1px solid var(--line); }.assessment-section-heading:first-child { margin-top: 0; padding-top: 0; border-top: 0; }.assessment-section-heading p { margin: 0; color: var(--terracotta); font-size: 10px; font-weight: 700; letter-spacing: 1px; }.assessment-field { display: grid; gap: 7px; margin-bottom: 14px; color: #525b50; font-size: 11px; font-weight: 600; }.assessment-field input, .assessment-field textarea { width: 100%; border: 1px solid #c8b8a8; border-radius: 0; background: #fff; padding: 11px; color: #30231c; caret-color: var(--terracotta); font-family: inherit; font-size: 12px; outline: none; }.assessment-field input { height: 43px; }.assessment-field textarea { resize: vertical; }.assessment-field input:focus, .assessment-field textarea:focus { border-color: var(--terracotta); box-shadow: 0 0 0 3px rgb(122 56 38 / 15%); }.assessment-fieldset { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; margin: 0 0 14px; padding: 0; border: 0; }.assessment-fieldset legend { grid-column: 1 / -1; margin-bottom: 8px; color: #525b50; font-size: 11px; font-weight: 600; }.assessment-radio, .assessment-checkbox { display: flex; align-items: flex-start; gap: 8px; min-height: 38px; padding: 9px 10px; border: 1px solid #d8c9b9; background: #fff; color: #3b2d26; font-size: 11px; line-height: 1.45; cursor: pointer; }.exact-assessment-form { color-scheme: light; }
+.assessment-radio input, .assessment-checkbox input { width: 15px; height: 15px; flex: 0 0 15px; margin: 1px 0 0; accent-color: var(--terracotta); }.consent-question { grid-column: 1 / -1; }.exact-assessment-form .quiz-controls { margin-top: 20px; }.quiz-launch-card { display: grid; justify-items: center; gap: 18px; padding-block: 38px; text-align: center; }.quiz-launch-card p { max-width: 430px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }.quiz-launch-button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; }
 @media (max-width: 640px) {
   .assessment-section { scroll-margin-top: 68px; }
   .assessment-section .quiz-content { margin-top: 50px; margin-bottom: 50px; }
@@ -502,7 +503,8 @@ button:disabled { cursor: not-allowed; }
   border-bottom: 1px solid var(--line);
   background: #fffdf8;
 }
-.vendor-wordmark { display: grid; gap: 5px; font-size: 13px; font-weight: 700; letter-spacing: .5px; }
+.vendor-wordmark { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; letter-spacing: .5px; }
+.vendor-brand-logo { display: block; width: 92px; height: 58px; object-fit: contain; }
 .vendor-wordmark span { color: var(--muted); font-size: 8px; font-weight: 500; letter-spacing: 1.5px; }
 .vendor-header nav { display: flex; align-items: center; gap: 24px; }
 .vendor-header nav a, .vendor-sign-out { color: var(--muted); font-size: 11px; }

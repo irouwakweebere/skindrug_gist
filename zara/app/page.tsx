@@ -5,6 +5,7 @@ import { connection } from "next/server";
 import { defaultSiteContent } from "./lib/site-content-model";
 import { getSiteContent } from "./lib/site-content";
 function backgroundImage(url: string) {
+  if (/^\/images\/[a-z0-9-]+\.(?:jpe?g|png|webp)$/i.test(url)) return `url("${url}")`;
   try {
     return `url("${new URL(url).href.replaceAll('"', "%22")}")`;
   } catch {
@@ -25,7 +26,7 @@ export default async function Home() {
     <>
       <header className="site-header" id="home">
         <a className="brand-logo-link" href="#home" aria-label="Skindrug Gist">
-          <Image className="brand-logo brand-logo-header" src="/brand-logo.svg" alt="Skindrug Gist" width={118} height={68} priority unoptimized />
+          <Image className="brand-logo brand-logo-header" src="/skindrug-gist-mark.png" alt="Skindrug Gist" width={118} height={68} priority unoptimized />
         </a>
         <nav className="main-nav" aria-label="Main navigation">
           <a className="active" href="#home">{content.brand.navHome}</a>
@@ -136,7 +137,7 @@ export default async function Home() {
 
       <footer className="site-footer">
         <a className="brand-logo-link footer-brand-logo-link" href="#home" aria-label="Skindrug Gist">
-          <Image className="brand-logo brand-logo-footer" src="/brand-logo.svg" alt="Skindrug Gist" width={120} height={70} unoptimized />
+          <Image className="brand-logo brand-logo-footer" src="/skindrug-gist-mark-light.png" alt="Skindrug Gist" width={120} height={70} unoptimized />
         </a>
         <p>{content.brand.footerTagline}</p>
         <div className="footer-links"><a href="#services">{content.brand.navServices}</a><Link href="/assessment">Skin assessment</Link><a href="#learn">{content.brand.navLearn}</a><Link href="/shops">{content.brand.navShop}</Link><Link href="/vendors/apply">Become a vendor</Link><Link href="/vendors/login">Vendor login</Link><a href={`mailto:${content.brand.contactEmail}`}>{content.brand.navContact}</a></div>

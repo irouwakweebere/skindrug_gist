@@ -102,8 +102,8 @@ export const defaultSiteContent: SiteContent = {
     sealFirst: "CARE THAT",
     sealSecond: "STARTS WITH",
     sealFinal: "you",
-    imageUrl: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1450&q=88",
-    imageAlt: "Woman with healthy, natural skin in warm daylight",
+    imageUrl: "/images/hero-melanin.jpg",
+    imageAlt: "Dark-skinned Black woman with natural skin in warm daylight",
   },
   services: {
     eyebrow: "A LITTLE HELP, A LOT MORE CLARITY",
@@ -121,8 +121,8 @@ export const defaultSiteContent: SiteContent = {
     heading: "Get to know",
     emphasis: "your skin.",
     description: "A little knowledge can make everything feel less confusing. Start with the things your skin’s been trying to tell you.",
-    imageUrl: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Simple skincare ingredients arranged in natural morning light",
+    imageUrl: "/images/learn-skincare.jpg",
+    imageAlt: "Dark-skinned Black woman applying serum in a warm bathroom",
     linkText: "Explore skin services",
     imageNoteFirst: "A softer approach",
     imageNoteSecond: "to your skincare shelf.",
@@ -139,9 +139,9 @@ export const defaultSiteContent: SiteContent = {
     description: "We believe in a small, considered routine. A few good things, chosen with care.",
     linkText: "Shop all essentials",
     items: [
-      { label: "01 / CLEANSE", name: "The Everyday Cleanser", description: "Soft, simple, no tight-skin feeling.", price: "$24", imageUrl: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=800&q=80", imageAlt: "Gentle cleanser bottle beside fresh green leaves" },
-      { label: "02 / NOURISH", name: "Cloud Nine Moisturizer", description: "A little comfort for your skin barrier.", price: "$32", imageUrl: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=80", imageAlt: "Moisturizer jar in soft morning light" },
-      { label: "03 / PROTECT", name: "Everyday SPF 30", description: "Lightweight, easy, every single day.", price: "$28", imageUrl: "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=800&q=80", imageAlt: "Sunscreen tube on a sunlit stone surface" },
+      { label: "01 / CLEANSE", name: "The Everyday Cleanser", description: "Soft, simple, no tight-skin feeling.", price: "$24", imageUrl: "/images/product-cleanser.jpg", imageAlt: "Dark-skinned Black hands holding an amber cleanser bottle" },
+      { label: "02 / NOURISH", name: "Cloud Nine Moisturizer", description: "A little comfort for your skin barrier.", price: "$32", imageUrl: "/images/product-moisturizer.jpg", imageAlt: "Dark-skinned Black woman applying moisturizer to her cheek" },
+      { label: "03 / PROTECT", name: "Everyday SPF 30", description: "Lightweight, easy, every single day.", price: "$28", imageUrl: "/images/product-spf.jpg", imageAlt: "Dark-skinned Black woman applying sunscreen outdoors" },
     ],
   },
   closing: {
@@ -165,6 +165,7 @@ function validTextFields(record: Record<string, unknown>, limits: Record<string,
 function validImageUrl(value: unknown) {
   if (typeof value !== "string" || value.length > 2048) return false;
   if (!value) return true;
+  if (/^\/images\/[a-z0-9-]+\.(?:jpe?g|png|webp)$/i.test(value)) return true;
 
   try {
     return new URL(value).protocol === "https:";

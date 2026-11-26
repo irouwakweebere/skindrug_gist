@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import AdminLogoutButton from "./admin-logout-button";
 
@@ -42,9 +43,9 @@ export default function AdminDashboard() {
   return (
     <div className="admin-shell">
       <aside className="admin-sidebar">
-        <Link className="admin-brand" href="/" aria-label="Truth Skin Studio home">
-          <span className="admin-brand-mark">t.</span>
-          <span>SKIN<span className="admin-brand-subtitle">DRUG_GIST</span></span>
+        <Link className="admin-brand" href="/" aria-label="Skindrug Gist home">
+          <Image className="admin-brand-logo" src="/skindrug-gist-mark.png" alt="Skindrug Gist" width={110} height={70} unoptimized />
+          <span className="admin-brand-subtitle">ADMIN WORKSPACE</span>
         </Link>
         <p className="admin-nav-label">WORKSPACE</p>
         <nav className="admin-nav" aria-label="Admin navigation">

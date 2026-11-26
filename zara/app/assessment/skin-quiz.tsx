@@ -5,7 +5,7 @@ import { useState, type FormEvent } from "react";
 const ageRanges = ["Under 18 years", "18-24 years", "25-34 years", "35-44 years", "45-54 years", "55 years and over"];
 const genders = ["Female", "Male", "Prefer not to say"];
 const skinTypes = ["Oily", "Dry", "Combination", "Normal", "Sensitive", "Not sure"];
-const skinTones = ["Very fair", "Fair", "Medium", "Tan/Caramel", "Deep", "Very deep"];
+const skinTones = ["Light brown", "Medium brown", "Tan/Caramel", "Deep brown", "Very deep brown"];
 const concernLocations = ["Face", "Neck", "Chest", "Back", "Arm", "Leg", "Entire body"];
 const mainConcerns = ["Acne", "Dark spots or post-acne marks", "Hyperpigmentation", "Uneven skin tone", "Melasma", "Oily skin", "Dry skin", "Sun damage", "Sensitive skin", "Eczema", "Fine lines or wrinkles", "Textured skin", "Large pores", "Damage from skin-lightening creams", "Stretch marks"];
 const concernDurations = ["Less than a month", "1-3 months", "3-6 months", "6-12 months", "1 year"];
